@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-#function that returns an matriz of all_pixels[frame][pixel][rgb]
+#function that returns an matriz of all_pixels[frame][pixel][BGA]
 def extract_pixels(video_path):
     video = cv2.VideoCapture(video_path)
 
@@ -43,6 +43,9 @@ for i in range(frames): #frame
             height = len(pixels[i][j])
             for k in range(height): #height
 
+                #I couldn't get the transparency of videos or gifs because of cv2
+                #so i'm removing everything that is 100% white so 80% of the gifs that have transparency work
+                #this works like a chroma key, you can change it if you want to 0 255 0 255 (RGBA) for a green background
                 if (pixels[i][j][k][2] == 255 and pixels[i][j][k][1] == 255 and pixels[i][j][k][0] == 255 and pixels[i][j][k][3] == 255):
                     continue
 
