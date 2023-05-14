@@ -1,3 +1,5 @@
+#pip install opencv-python
+
 import cv2
 import numpy as np
 
@@ -28,7 +30,7 @@ def extract_pixels(video_path):
 
 
 #video pafh and function name
-video_path = './nekoarc.gif'
+video_path = './example/nekoarc.gif'
 func_name = 'nekoarc'
 
 pixels = extract_pixels(video_path)

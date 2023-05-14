@@ -1,7 +1,8 @@
+#pip install Pillow  
 from PIL import Image
 
 #video pafh and function name
-img_path = './fischl.png'
+img_path = './example/fischl.png'
 func_name = 'fischl'
 
 # creating a image object
