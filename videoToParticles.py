@@ -30,8 +30,8 @@ def extract_pixels(video_path):
 
 
 #video pafh and function name
-video_path = './example/nekoarc.gif'
-func_name = 'nekoarc'
+video_path = './examples/nezuko.gif'
+func_name = 'nezuko'
 
 pixels = extract_pixels(video_path)
 
